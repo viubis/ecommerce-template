@@ -1,0 +1,669 @@
+/*Resert -------*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 100%;
+    font-family: 'Lato', sans-serif;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Header -------------------------------------*/
+header {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+header .topo {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+    margin: 0 10px;
+    font-size: 1.8rem;
+    background:  #a3e7f8;
+}
+
+header .topo .logo img {
+    width: 48px;
+}
+
+header .topo input {
+    text-align: center;
+    width: 60%;
+    border: none;
+    border-radius: 5px;
+} 
+
+header .topo .menu {
+    color: #FFF;
+}
+
+header .topo nav {
+    width: 100%;
+    text-align: center;
+    background:  #61d8f6;
+    border-radius: 0 0 10px 10px;
+
+    visibility: hidden;
+    position: fixed;
+    top: 0px;
+    left: 0;
+}
+
+header .topo nav:target {
+    top: 74px;
+    visibility: visible;
+    z-index: 1;
+    transition: 0.5s all;
+}
+
+header .topo nav ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+header .topo nav ul i {
+
+}
+
+header .topo nav ul li a {
+    font-size: 1.3rem;
+    color: #FFF;
+    padding: 5px;
+    margin: 5px;
+}
+
+header .topo .user {
+    color: #FFF;
+}
+
+header .topo .cart {
+    color: #FFF;
+}
+
+/* Banner ----------------------------------- */
+
+header .banner {
+    width: 100%;
+    background-color: #f4fcfc;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px 0;
+}
+
+header .banner h1 {
+    font-size: 1.5rem;
+    padding: 10px;
+    font-weight: 300;
+}
+
+header .banner hr {
+    margin-top: 10px;
+    width: 150px;
+}
+
+header .banner a {
+    padding: 10px;
+    padding: 10px;
+    color: #FFF;
+    background: #a3e7f8;
+    border-radius: 5px;
+}
+
+header .banner .banner-slider {
+    overflow: hidden;
+    padding: 10px;
+}
+
+header .banner .banner-slider figure {
+    position: relative;
+    width: 500%;
+    left: 0;
+    animation: 20s slider infinite;
+}
+
+header .banner .banner-slider figure img {
+    width: 20%;
+    border: 1px solid #CCC;
+    border-radius: 10px;
+    float: left;
+}
+
+@keyframes slider {
+    0% {
+        left: 0;
+    }
+    20% {
+        left: 0;
+    }
+    25% {
+        left: -100%;
+    }
+    45% {
+        left: -100%;
+    }
+    50% {
+        left: -200%;
+    }
+    70% {
+        left: -200%;
+    }
+    
+}
+
+/* Produtos em Promoções ------------------------*/
+.promocoes {
+    background: #FFF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.promocoes h1 {
+    font-size: 1.5rem;
+    padding: 40px 0 20px 0;
+    font-weight: 300;   
+}
+
+.promocoes .produtos-promocoes {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.promocoes .produtos-promocoes .promocoes-content {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px 0px rgba(44, 44, 44, 0.2);
+    margin: 10px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.promocoes .produtos-promocoes .promocoes-content span {
+    font-size: 1.5rem;
+    color: rgb(220, 202, 4);
+    position: relative;
+    top: -330px;
+    right: -90px;
+}
+
+.promocoes .produtos-promocoes .promocoes-content img {
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+}
+
+.promocoes .produtos-promocoes .promocoes-content .promocao {
+    color: #262626;
+    width: 90%;
+    padding: 10px 0;
+}
+
+.promocoes .produtos-promocoes .promocoes-content .promocao h2 {
+    font-size: 1.2rem;
+    font-weight: 300;
+}
+
+.promocoes .produtos-promocoes .promocoes-content .promocao p.promocao-valor {
+    font-size: 1rem;
+    text-decoration: line-through; /*Rica o valor*/
+}
+
+.promocoes .produtos-promocoes .promocoes-content .promocao p.promocao-destaque {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+/* Newsletter ------------------------------------------*/
+.newsletter {
+    background-color: #e5f6f6;
+    margin: 20px auto;
+    padding: 30px 20px;
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.newsletter .newsletter-titulo {
+    margin: 20px;
+}
+
+.newsletter .newsletter-titulo h1 {
+    font-size: 1.5rem;
+    margin: 10px 0;
+    font-weight: 300;
+}
+
+.newsletter .newsletter-titulo p {
+    font-size: 1rem;
+    margin: 0 20px;
+}
+
+.newsletter form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.newsletter form input {
+    width: 70%;
+    line-height: 100%;
+    padding: 5px;
+    border: 1px solid #CCC;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+.newsletter form input[type="submit"] {
+    color: #FFF;
+    background-color:  #a3e7f8;
+    padding: 10px;
+}
+
+/* Produtos em Destaque -------------------------------------- */
+
+.produtos {
+    margin: 20px auto;
+    text-align: center;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    gap: 20px;
+}
+
+.produtos h1 {
+    font-size: 1.5rem;
+    font-weight: 300;
+    grid-column: span 2;
+}
+.produtos .produto {
+    width: 90%;
+    padding: 10px;
+    border: 1px solid #CCC;
+    border-radius: 5px;
+}
+
+.produtos .first {
+    grid-column: span 2;
+}
+
+.produtos .produto img {
+    width: 100%;
+}
+
+.produtos .produto .produto-content {
+    color: #262626;
+}
+
+.produtos .produto .produto-content h1 {
+    font-size: 1rem;
+}
+
+.produtos .produto p {
+    color: #262626;
+    font-size: 0.9rem;
+}
+
+
+/*Sobre ------------------------------------------*/
+.sobre {
+    background: #e5f6f6;
+    padding: 30px 0;
+}
+
+.sobre .sobre-content {
+    text-align: center;
+    padding: 20px 30px;
+}
+
+.sobre .sobre-content h1 {
+    font-size: 1.5rem;
+    font-weight: 300;
+    padding: 10px;
+}
+
+.sobre .sobre-content p {
+    font-size: 1rem;
+}
+
+/*Bottom menu --------------------------------------*/
+.hidden {
+    display: none;
+}
+
+.bottom-menu {
+    padding: 20px 0;
+}
+
+.bottom-menu iframe {
+    width: 100%;
+    height: 100%;
+}
+
+.bottom-menu p {
+    color: #CCC;
+    padding-left: 10px;
+}
+
+.bottom-menu .sociais {
+    text-align: center;
+}
+
+.bottom-menu .sociais h1 {
+    display: none;
+}
+
+.bottom-menu .sociais ul {
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.bottom-menu .sociais ul li a {
+    color:  #a3e7f8;
+    font-size: 1.5rem;
+}
+/*Footer ------------------------------------------*/
+footer {
+    background: #262626;
+    color: #FFF;
+    padding: 10px 0;
+    text-align: center;
+}
+
+footer p {
+    font-size: 0.9rem;
+}
+
+footer p a {
+    color: #9733EE;
+}
+
+/* Breakpoints ----------------------------------- */
+@media (min-width: 700px) {
+
+    /*Banner ---------------------------------*/
+    header .banner .banner-slider {
+        overflow: none;
+    }
+    
+    header .banner .banner-slider figure {
+        animation: none;
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    
+    header .banner .banner-slider figure img {
+        width: 30%;
+    }
+
+    /*Promoções -----------------------------------*/
+    .promocoes .produtos-promocoes {
+        width: 100%;
+        max-width: 1200px;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .promocoes .produtos-promocoes .promocoes-content {
+        width: 100%;
+        max-width: 300px;
+        margin: 10px 10px;
+        flex-direction: column;
+    }
+    
+    .promocoes .produtos-promocoes .promocoes-content img {
+        width: 100%;
+    }
+
+    .promocoes .produtos-promocoes .promocoes-content span {
+        top: 0px;
+        right: 0px;
+    }
+    
+    .promocoes .produtos-promocoes .promocoes-content .promocao h2 {
+        font-size: 1.5rem;
+    }
+    
+    .promocoes .produtos-promocoes .promocoes-content .promocao p.promocao-valor {
+        font-size: 1.2rem;
+    }
+
+    /*Produtos em destaque ------------------------*/
+    .produtos {
+        width: 100%;
+        max-width: 1100px;
+        grid-template-columns: 1fr 1fr 1fr;
+        justify-items: center;
+        align-items: center;
+        gap: 20px;
+        
+        
+        display: grid;
+        margin: 20px auto;
+        text-align: center;
+        padding: 10px;
+    }
+    
+    .produtos h1 {
+        font-size: 1.5rem;
+        font-weight: 300;
+        grid-column: span 3;
+    }
+    
+    .produtos .produto {
+        width: 100%;
+        max-width: 400px;
+        max-height: 300px;
+        
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        flex-wrap: nowrap;
+
+        padding: 10px;
+        border: 1px solid #CCC;
+        border-radius: 5px;
+    }
+    
+    .produtos .produto img {
+        object-fit: cover;
+        max-height: 150px;
+    }
+    
+    .produtos .produto .produto-content {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .produtos .produto .produto-content h1 {
+        font-size: 0.9rem;
+    }
+    
+    .produtos .produto .produto-content .produto-avaliacao {
+        font-size: 0.9rem;
+    }
+
+    .produtos .first {
+        grid-column: span 1;
+        grid-row: span 2;
+        height: 430px;
+        max-height: 100%;
+    }
+
+    .produtos .first a img {
+        width: 100%;
+        max-width: 100%;
+        height: 350px;
+        max-height: 100%;
+    }
+
+    .produtos .first a .produto-content {
+        width: 300px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .produtos .first a p {
+
+    }
+
+    .newsletter form {
+        max-width: 700px;
+    }
+
+    /*Bottom Menu ---------------------------------*/
+    .hidden {
+        display: block;
+    }
+    
+    .bottom-menu {
+        width: 100%;
+        padding: 20px;
+        display: flex;
+        justify-content: space-around;
+    }
+    
+    .bottom-menu .localizacao {
+        width: 30%;
+    }
+
+    .bottom-menu .localizacao iframe {
+        width: 100%;
+        height: 150px;
+        border-radius: 5px;
+    }
+    
+    .bottom-menu .localizacao p {
+        color: #3b3b3b;
+        padding-left: 10px;
+    }
+
+    .bottom-menu .sociais {
+        text-align: center;
+    }
+
+    .bottom-menu .sociais h1 {
+        display: block;
+    }
+
+    .bottom-menu .sociais ul {
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .links ul {
+        padding: 10px 0;
+    }
+
+    .links ul li {
+        color: #262626;
+        margin: 10px 0;
+    }
+
+    .links ul li a {
+        color: #262626;
+    }
+
+    .bottom-menu .sociais ul li #linkedin::after {
+        content: "LinkedIn";
+        font-size: 1rem;
+    }
+
+    .bottom-menu .sociais ul li #facebook::after {
+        content: "Facebook";
+        font-size: 1rem;
+    }
+
+    .bottom-menu .sociais ul li #insta::after {
+        content: "Instagram";
+        font-size: 1rem;
+    }
+
+    .bottom-menu .sociais ul li #twitter::after {
+        content: "Twitter";
+        font-size: 1rem;
+    }
+}
+
+@media (min-width: 1000px) {
+    header .topo input {
+        width: 40%;
+
+
+        text-align: center;
+        border: none;
+        border-radius: 5px;
+    } 
+
+    header .topo .menu {
+        display: none;
+    }
+    
+    header .topo nav {
+        visibility: visible;
+        width: 20%;
+        position: static;
+    }
+    
+    header .topo nav ul {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    header .user::after {
+        content: "Entrar";
+        font-size: 1.1rem;
+        margin-left: 5px;
+    }
+
+    header .cart::after {
+        content: "Carrinho";
+        font-size: 1.1rem;
+        margin-left: 5px;
+    }
+}

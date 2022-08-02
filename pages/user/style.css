@@ -1,0 +1,178 @@
+/*Resert -------*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 100%;
+    font-family: 'Lato', sans-serif;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+/*Container ------------------------------*/
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    margin: 0 auto;
+    text-align: center;
+    background: #FFF;
+
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.container .content-area h1 {
+    font-size: 3rem;
+    color: #a3e7f8;
+    margin: 20px;
+}
+
+/*Content Area ---------------------------*/
+
+.container .content-area {
+}
+
+.container .content-area nav {
+    width: 100%;
+}
+
+.container .content-area nav a {
+    text-align: center;
+    display: inline-block;
+    background: #a3e7f8;
+    border-radius: 5px;
+    color: #FFF;
+    width: 30%;
+    padding: 10px;
+    margin: 20px 3px;
+
+}
+
+.container .content-area .abas div {
+    display: none;
+}
+
+
+.container .content-area .abas div:target {
+    display: block;
+}
+
+.container .content-area .abas{
+    margin: 10px 0;
+}
+
+.container .content-area .abas .signin{
+    text-align: center;
+}
+
+.container .content-area .abas .signin h1 {
+    font-size: 1.5rem;
+}
+
+.container .content-area .abas .signin form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container .content-area .abas .signin input {
+    width: 80%;
+    padding: 10px;
+    margin: 5px;
+    border: 1px solid #CCC;
+    border-radius: 5px;
+}
+
+.container .content-area .abas .signin input[type="submit"] {
+    background: #a3e7f8;
+    color: #FFF;
+    padding: 10px;
+}
+
+.container .content-area .abas .signup{
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.container .content-area .abas .signup h1{
+    font-size: 1.5rem;
+}
+
+.container .content-area .abas .signup input {
+    width: 80%;
+    padding: 10px;
+    margin: 5px;
+    border: 1px solid #CCC;
+    border-radius: 5px;
+}
+
+.container .content-area .abas .signup input[type="submit"] {
+    background: #a3e7f8;
+    color: #FFF;
+    padding: 10px;
+}
+
+/*Visual Area ---------------------------*/
+.container .visual-area {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #FFF;
+    background: #a3e7f8;
+}
+
+.container .visual-area h1 {
+    color: #FFF;
+    width: 100%;
+    font-size: 1.5rem;
+    margin: 20px;
+}
+
+.container .visual-area p {
+    width: 80%;
+    margin: 10px;
+}
+
+.container .visual-area img {
+    width: 50%;
+}
+
+/*Media query -------------------------------*/
+@media (min-width: 700px) {
+    .container {
+        grid-template-columns: minmax(400px, 1fr) 1fr 1fr;
+        align-items: center;
+    }
+
+    .container .visual-area {
+        grid-column: span 2;
+    }
+
+    .container .visual-area {
+        height: 100vh;
+    }
+
+    .container .visual-area h1 {
+        width: 100%;
+        font-size: 2.5rem;
+        margin: 20px;
+    }
+
+    .container .visual-area p {
+        width: 60%;
+        margin: 10px;
+    }
+}

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="../../fonts/css/font-awesome.min.css">
+    <!-- Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="style.css">
+    <title>Carrinho - Ecommerce</title>
+</head>
+<body>
+    <header id="home">
+        <div class="topo">
+            <a class="logo" href="../../index.html"><img src="../../img/placeholder-white.png" alt=""></a>
+            <input type="search" name="search" id="search">
+            <a class="menu" href="#dropdown-nav"><i class="fa fa-bars" aria-hidden="true"></i></a>
+            <nav id="dropdown-nav">
+                <ul>
+                    <li><a href="../../index.html">Home</a></li>
+                    <li><a href="../../index.html#sobre">Sobre</a></li>
+                    <li><a href="../shop/shop.html">Shop</a></li>
+                    <li><a href="../../index.html#sobre">Ajuda</a></li>
+                </ul>
+            </nav>
+            <a class="user" href="../../pages/user/register-login.html#signup"><i class="fa fa-user" aria-hidden="true"></i></a>
+            <a class="cart" href="../carrinho/carrinho.html"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+        </div>
+    </header>
+
+    <div class="abas-buttons">
+        <nav>
+            <a href="#carrinho"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Carrinho</i></a>
+            <a href="#envio"><i class="fa fa-truck" aria-hidden="true"></i> Envio</a>
+            <a href="#pagamento"><i class="fa fa-money" aria-hidden="true"></i> Pagamento</a>
+        </nav>
+    </div>
+
+    <div id="carrinho" class="aba">
+        <h1 class="titulo-carrinho">Carrinho de Compras</h1>
+        
+        <div class="produtos">
+            <div class="produto">
+                <img src="img/box-1.png" alt="">
+                <div class="content">
+                    <h1>Nome Produto</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                    <p>R$ 300</p>
+                </div>
+                <input type="number" name="quantidade" id="quantidade" value="1" min="1" max="10">
+            </div>
+
+            <div class="produto">
+                <img src="img/box-2.png" alt="">
+                <div class="content">
+                    <h1>Nome Produto</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                    <p>R$ 300</p>
+                </div>
+                <input type="number" name="quantidade" id="quantidade" value="1" min="1" max="10">
+            </div>
+
+            <div class="produto">
+                <img src="img/box-3.png" alt="">
+                <div class="content">
+                    <h1>Nome Produto</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                    <p>R$ 300</p>
+                </div>
+                <input type="number" name="quantidade" id="quantidade" value="1" min="1" max="10">
+            </div>
+        </div>
+
+        <div class="finalizar">
+            <a href="#envio">Próximo</a>
+            <a href="../../index.html">Cancelar</a>
+        </div>
+
+    </div>
+
+    <div id="envio" class="aba">
+        <h1>Detalhes de Envio</h1>
+        <div class="content">
+            <input type="text" name="nome" id="nome" placeholder="Primeiro Nome">
+            <input type="text" name="sobrenome" id="sobrenome" placeholder="Sobre Nome">
+            <input type="text" name="endereco" id="endereco" placeholder="Endereço">
+            <input type="text" name="complemento" id="complemento" placeholder="Complemento">
+            <input type="text" name="cidade" id="cidade" placeholder="Cidade">
+            <input type="text" name="estado" id="estado" placeholder="Estado">
+            <input type="text" name="cep" id="cep" placeholder="CEP">
+            <input type="tel" name="tel" id="tel" placeholder="Telefone">
+            <div class="radios">
+                <input type="radio" name="envio" id="gratis">
+                <label for="gratis" class="content">
+                    <h2>Envio Gratuito</h2>
+                    <p>Entre 2 - 5 dias úteis</p>
+                </label>
+            </div>
+            <div class="radios">
+                <input type="radio" name="envio" id="pago">
+                <label for="pago" class="content">
+                    <h2>Br Envios - R$ 100</h2>
+                    <p>24 horas (sqn)</p>
+                </label>
+            </div>
+        </div>
+
+        <div class="finalizar">
+            <a href="#pagamento">Próximo</a>
+            <a href="../../index.html">Cancelar</a>
+        </div>
+    </div>
+
+    <div id="pagamento" class="aba">
+        <h1>Método de Pagamento</h1>
+        
+        <label for="metodo-pagamento">
+            <div class="cartao">
+                <div class="content">
+                    <input type="radio" name="metodo-pagamento" id="cartao">
+                    <div class="text">
+                        <h2>Cartão de Crédito</h2>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+                    </div>
+                </div>
+                <div class="cartao-content">
+                    <input type="number" name="numero" id="numero" placeholder="0000 0000 0000 0000">
+                    <input type="number" name="data" id="data" placeholder="MM/YY">
+                    <input type="number" name="cvv" id="cvv" placeholder="CVV">
+                    <input type="text" name="nome" id="nome" placeholder="Nome do Títular">
+                </div>
+            </div>
+    
+            <div class="paypal">
+                <input type="radio" name="metodo-pagamento" id="paypal">
+                <div class="content">
+                    <h2>Paypal</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                </div>
+                <img src="img/paypal.png" alt="">
+            </div>
+        </label>
+        
+    </div>
+
+    <section class="resumo">
+        <h1>Resumo</h1>
+        <div class="cupon">
+            <input type="text" name="" id="" placeholder="Cupon de Desconto">
+            <input type="submit" value="Aplicar">
+        </div>
+        <div class="total">
+            <p>Subtotal</p>
+            <p>R$ 900</p>
+            <p>Envio</p>
+            <p>FREE</p>
+            <p>Taxas</p>
+            <p>R$ 10</p>
+            <h2>TOTAL</h2>
+            <h2>R$ 910</h2>
+        </div>
+
+        <a class="finalizar-pagamento" href="../../index.html">Finalizar Compra</a>
+    </section>
+
+</body>
+</html>

@@ -1,0 +1,410 @@
+/*Resert -------*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 100%;
+    font-family: 'Lato', sans-serif;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Header -------------------------------------*/
+header {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+header .topo {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+    margin: 0 10px;
+    font-size: 1.8rem;
+    background: #a3e7f8;
+}
+
+header .topo .logo img {
+    width: 48px;
+}
+
+header .topo input {
+    text-align: center;
+    width: 60%;
+    border: none;
+    border-radius: 5px;
+} 
+
+header .topo .menu {
+    color: #FFF;
+}
+
+header .topo nav {
+    width: 100%;
+    text-align: center;
+    background: #a3e7f8;
+    border-radius: 0 0 10px 10px;
+
+    visibility: hidden;
+    position: fixed;
+    top: 0px;
+    left: 0;
+}
+
+header .topo nav:target {
+    top: 74px;
+    visibility: visible;
+    z-index: 1;
+    transition: 0.5s all;
+}
+
+header .topo nav ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+header .topo nav ul i {
+
+}
+
+header .topo nav ul li a {
+    font-size: 1.3rem;
+    color: #FFF;
+    padding: 5px;
+    margin: 5px;
+}
+
+header .topo .user {
+    color: #FFF;
+}
+
+header .topo .cart {
+    color: #FFF;
+}
+
+/*Banner -------------------------------*/
+.banner {
+    background: #f8f2f2;
+    padding: 30px 0;
+    width: 100%;
+}
+
+.banner .content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.banner .content h1 {
+    font-size: 1.5rem;
+    font-weight: 300;
+    padding: 10px;
+}
+
+.banner .content hr {
+    width: 30%;
+    margin: 10px;
+    border: 1px solid #CCC;
+}
+
+.banner .content form {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner .content form input {
+    padding: 10px;
+    width: 100%;
+    border: 1px solid #CCC;
+    border-radius: 3px;
+}
+
+.banner .content form input[type="search"] {
+    margin-left: 20px;
+    margin-right: 5px;
+}
+
+.banner .content form input[type="submit"] {
+    width: 30%;
+    margin-right: 20px;
+    background: #a3e7f8;
+    color: #FFF;
+}
+
+/*Categorias ------------------------------------*/
+.categorias {
+    width: 100%;
+    margin: 20px 0;
+    text-align: center;
+}
+
+.categorias h1 {
+    font-size: 1.5rem;
+    font-weight: 300;
+    padding: 20px;
+}
+
+.categorias p {
+    font-weight: 300;
+    padding: 20px;
+}
+
+.categorias .content {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.categorias .content .categoria {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 5px;
+}
+
+.categorias .content .categoria .imagem {
+    width: 100%;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    border: 1px solid #CCC;
+}
+
+.categorias .content .categoria .imagem img {
+    width: 100%;
+}
+
+.categorias .content .categoria h2 {
+    font-size: 1.2rem;
+    font-weight: 300;
+}
+
+/*Newsletter -----------------------------------*/
+.newsletter {
+    background: #f8f2f2;
+    padding: 20px auto;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.newsletter img {
+    margin: 10px 5px;
+    width: 25%;
+}
+
+.newsletter .content h1 {
+    font-size: 1.5rem;
+    font-weight: 300;
+    margin: 5px;
+}
+
+.newsletter form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.newsletter .content form input {
+    width: 100%;
+    padding: 10px;
+    margin: 5px;
+    border: 1px solid #CCC;
+    border-radius: 3px;
+}
+
+.newsletter .content form input[type="submit"] {
+    width: 35%;
+    background: #a3e7f8;
+    color: #FFF;
+}
+
+/*Produtos ----------------------------------------*/
+.produtos {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 5px;
+    margin: 10px 0;
+}
+
+.produtos .cabecalho {
+    width: 100%;
+    margin-bottom: 20px;
+    grid-column: span 3;
+    height: 100%;
+}
+
+.produtos .cabecalho h1 {
+    font-size: 1.5rem;
+    padding: 20px;
+}
+
+.produtos .cabecalho p {
+    margin: 20px;
+}
+
+.produtos .cabecalho a {
+    padding: 10px;
+    color: #FFF;
+    background: #a3e7f8;
+    border-radius: 5px;
+}
+
+.produtos .produto {
+    width: 95%;
+    justify-self: center;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border: 1px solid #CCC;
+}
+
+.produtos .produto img {
+    width: 40%;
+}
+
+.produtos .produto .content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    font-weight: 300;
+    font-size: 0.8rem;
+}
+
+.produtos .produto .content h2 {
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+/*Footer ------------------------------------------*/
+footer {
+    background: #262626;
+    color: #FFF;
+    padding: 10px 0;
+    text-align: center;
+}
+
+footer p {
+    font-size: 0.9rem;
+}
+
+footer p a {
+    color: #9733EE;
+}
+
+/*Media Querys e breakpoints ----------------------*/
+@media (min-width: 700px) {
+    .banner .content {
+        max-width: 900px;
+        margin: 0 auto;
+    }
+
+    .banner .content h1 {
+        font-size: 2.5rem;
+    }
+
+    .categorias {
+        max-width: 900px;
+        margin: 0 auto;
+    }
+
+    .categorias h1 {
+        font-size: 2.5rem;
+    }
+    
+    .newsletter .content {
+        width: 50%;
+    }
+
+    .newsletter .content h1 {
+        font-size: 2.5rem;
+    }
+    
+    .newsletter .content form input {
+        width: 100%;
+        padding: 10px;
+        margin: 5px;
+        border: 1px solid #CCC;
+        border-radius: 3px;
+    }
+
+    .produtos {
+        max-width: 900px;
+        margin: 0 auto;
+        margin-bottom: 30px;
+    }
+
+    .produtos .cabecalho h1 {
+        font-size: 2.5rem;
+    }
+}
+
+@media (min-width: 1000px) {
+    header .topo input {
+        width: 40%;
+
+
+        text-align: center;
+        border: none;
+        border-radius: 5px;
+    } 
+
+    header .topo .menu {
+        display: none;
+    }
+    
+    header .topo nav {
+        visibility: visible;
+        width: 20%;
+        position: static;
+    }
+    
+    header .topo nav ul {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    header .user::after {
+        content: "Entrar";
+        font-size: 1.1rem;
+        margin-left: 5px;
+    }
+
+    header .cart::after {
+        content: "Carrinho";
+        font-size: 1.1rem;
+        margin-left: 5px;
+    }
+}

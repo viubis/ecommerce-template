@@ -1,0 +1,483 @@
+/*Resert -------*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 100%;
+    font-family: 'Lato', sans-serif;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+/* Header -------------------------------------*/
+header {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+header .topo {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+    margin: 0 10px;
+    font-size: 1.8rem;
+    background: #a3e7f8;
+}
+
+header .topo .logo img {
+    width: 48px;
+}
+
+header .topo input {
+    text-align: center;
+    width: 60%;
+    border: none;
+    border-radius: 5px;
+} 
+
+header .topo .menu {
+    color: #FFF;
+}
+
+header .topo nav {
+    width: 100%;
+    text-align: center;
+    background: #61d8f6;
+    border-radius: 0 0 10px 10px;
+
+    visibility: hidden;
+    position: fixed;
+    top: 0px;
+    left: 0;
+}
+
+header .topo nav:target {
+    top: 74px;
+    visibility: visible;
+    z-index: 1;
+    transition: 0.5s all;
+}
+
+header .topo nav ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+header .topo nav ul i {
+
+}
+
+header .topo nav ul li a {
+    font-size: 1.3rem;
+    color: #FFF;
+    padding: 5px;
+    margin: 5px;
+}
+
+header .topo .user {
+    color: #FFF;
+}
+
+header .topo .cart {
+    color: #FFF;
+}
+
+/*Buttons Abas -------------------------------*/
+.abas-buttons {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.abas-buttons nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 5px;
+}
+
+.abas-buttons nav a {
+    color: #FFF;
+    font-size: 1.2rem;
+    font-weight: 300;
+    padding: 5px;
+    margin: 5px 5px;
+    background: #a3e7f8;
+    border-radius: 5px;
+    border: 1px solid #CCC;
+}
+
+/*Section Abas ---------------------------------*/
+.aba {
+    display: none;
+    width: 100%;
+}
+
+.aba:target {
+    display: block;
+}
+
+/*Carrinhos ------------------------------------*/
+#carrinho {
+    text-align: center;
+}
+
+#carrinho .titulo-carrinho {
+    font-size: 1.5rem;
+    font-weight: 300;
+}
+
+/*Produtos Carrinho*/
+#carrinho .produtos {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+}
+
+#carrinho .produtos .produto {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#carrinho .produtos .produto img {
+    width: 25%;
+}
+
+#carrinho .produtos .produto .content {
+    width: 100%;
+    margin: 10px;
+    font-weight: 300;
+}
+
+#carrinho .produtos .produto .content h1 {
+    font-size: 1.2rem;
+    font-weight: 300;
+}
+
+#carrinho .produtos .produto .content p + p {
+    margin-top: 5px;
+}
+
+#carrinho .produtos .produto input {
+    width: 20%;
+    border: 1px solid #CCC;
+    border-radius: 3px;
+    text-align: center;
+}
+
+
+/*Envio ----------------------------------------------------*/
+#envio {
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+}
+
+#envio h1 {
+    font-size: 1.5rem;
+    font-weight: 300;
+    margin: 10px;
+}
+
+#envio .content {
+    margin: 0 5px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+    gap: 5px;
+}
+
+#envio .content input {
+    padding: 5px;
+    width: 100%;
+    border: 1px solid #CCC;
+    border-radius: 3px;
+}
+
+#envio .content input[name="endereco"] {
+    grid-column: span 2;
+}
+
+#envio .content input[name="complemento"] {
+    grid-column: span 2;
+}
+
+#envio .content .radios {
+    width: 100%;
+    border: 1px solid #CCC;
+    border-radius: 5px;
+    margin: 5px;
+    padding: 5px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#envio .content .radios input {
+    width: 10%;
+}
+
+#envio .content .radios .content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    font-weight: 300;
+}
+
+#envio .content .radios .content h2{
+    font-weight: 300;
+}
+
+#envio .content .radios .content p{
+    font-size: 0.8rem;
+}
+
+/*Pagamento ------------------------------------------------*/
+#pagamento {
+    margin: 10px auto;
+    text-align: center;
+}
+
+#pagamento h1 {
+    margin: 10px;
+    font-size: 1.5rem;
+    font-weight: 300;
+}
+
+#pagamento label {
+    margin: 10px;
+}
+
+#pagamento .cartao {
+    margin: 5px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #CCC;
+}
+
+#pagamento .cartao .content {
+    margin: 5px;
+    display: flex;
+    justify-content: flex-start;
+}
+
+#pagamento .cartao .content input {
+    width: 10%;
+}
+
+#pagamento .cartao .content .text {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    font-weight: 300;
+}
+
+#pagamento .cartao .cartao-content {
+    display: grid;
+    text-align: center;
+    margin: 5px;
+    grid-template-columns: 1fr 1fr;
+    gap: 5px;
+}
+
+#pagamento .cartao .cartao-content input {
+    height: 30px;
+    border: 1px solid #CCC;
+    border-radius: 3px;
+    text-align: center;
+}
+
+#pagamento .cartao .cartao-content input[name="numero"] {
+    width: 100%;
+    grid-column: span 2;
+}
+
+#pagamento .cartao .cartao-content input[name="nome"] {
+    grid-column: span 2;
+}
+
+#pagamento .paypal {
+    margin: 5px;
+    padding: 10px;
+    border: 1px solid #CCC;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#pagamento .paypal .content {
+    margin: 5px;
+    font-weight: 300;
+    text-align: start;
+}
+
+#pagamento .paypal img {
+    width: 30%;
+}
+
+/*Resumo ---------------------------------------------------*/
+.resumo {
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.resumo h1 {
+    font-size: 1.5rem;
+    font-weight: 300;
+}
+
+.resumo .cupon {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.resumo .cupon input {
+    width: 100%;
+    margin: 5px;
+    padding: 8px;
+    border: 1px solid #CCC;
+    border-radius: 5px;
+}
+
+.resumo .cupon input[type="submit"] {
+    background: #a3e7f8;
+    color: #FFF;
+    max-width: 25%;
+}
+
+.resumo .total {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    justify-items: start;
+    margin: 10px;
+}
+
+.resumo .total p {
+    font-size: 1rem;
+    font-weight: 300;
+    margin: 5px;
+}
+
+#carrinho .resumo .total h2 {
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin: 10px 0;
+}
+
+.finalizar {
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 1.2rem;
+}
+
+.finalizar a {
+    background: #a3e7f8;
+    color: #FFF;
+    border-radius: 5px;
+    width: 80%;
+    padding: 10px;
+    margin: 10px;
+}
+
+.resumo .finalizar-pagamento {
+    width: 95%;
+    text-align: center;
+    color: #FFF;
+    background: #a3e7f8;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+}
+
+/*Breakpoints ----------------------------------*/
+@media (min-width: 900px) {
+
+    #carrinho {
+        margin: 0 auto;
+    }
+
+    #carrinho .produtos .produto .content {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .abas-buttons {
+        max-width: 900px;
+    }
+    .aba {
+        max-width: 900px;
+    }
+
+    .resumo {
+        max-width: 900px;
+        margin: 0 auto;
+    }
+
+    .resumo .finalizar-pagamento {
+        width: 100%;
+    }
+}
+
+@media (min-width: 1000px) {
+    header .topo input {
+        width: 40%;
+
+
+        text-align: center;
+        border: none;
+        border-radius: 5px;
+    } 
+
+    header .topo .menu {
+        display: none;
+    }
+    
+    header .topo nav {
+        visibility: visible;
+        width: 20%;
+        position: static;
+    }
+    
+    header .topo nav ul {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    header .user::after {
+        content: "Entrar";
+        font-size: 1.1rem;
+        margin-left: 5px;
+    }
+
+    header .cart::after {
+        content: "Carrinho";
+        font-size: 1.1rem;
+        margin-left: 5px;
+    }
+}
